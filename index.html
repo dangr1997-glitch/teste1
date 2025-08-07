@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Prompt JSON</title>
+  <style>
+    body {
+      font-family: monospace;
+      background: #f4f4f4;
+      padding: 20px;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+  <h1>Prompt JSON</h1>
+  <pre id="conteudo"></pre>
+
+  <script>
+    fetch('Prompt.txt')
+      .then(res => res.text())
+      .then(texto => {
+        document.getElementById('conteudo').textContent = texto;
+      });
+  </script>
+</body>
+</html>
