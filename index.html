@@ -1,27 +1,49 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Prompt JSON</title>
+  <title>Agente Copilot - JSON Jurídico</title>
   <style>
     body {
-      font-family: monospace;
-      background: #f4f4f4;
-      padding: 20px;
-      white-space: pre-wrap;
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+      line-height: 1.6;
+    }
+    pre {
+      background: #f0f0f0;
+      padding: 1em;
+      overflow: auto;
+    }
+    a {
+      display: inline-block;
+      margin-top: 20px;
     }
   </style>
 </head>
 <body>
-  <h1>Prompt JSON</h1>
-  <pre id="conteudo"></pre>
+  <h1>Base Pública para Agente Microsoft Copilot</h1>
+  <p>Este repositório tem como objetivo servir de fonte pública de instruções para o Microsoft Copilot atuar como agente na geração de arquivos JSON para casos jurídicos.</p>
 
-  <script>
-    fetch('Prompt.txt')
-      .then(res => res.text())
-      .then(texto => {
-        document.getElementById('conteudo').textContent = texto;
-      });
-  </script>
+  <h2>Como funciona</h2>
+  <ul>
+    <li>O agente deve gerar um arquivo JSON seguindo <strong>exatamente</strong> o modelo e as regras descritas em <code>Prompt.txt</code>.</li>
+    <li>Não são permitidas explicações ou alterações na estrutura do JSON.</li>
+    <li>A classificação de assuntos e subassuntos deve respeitar as listas contidas no Prompt.txt.</li>
+    <li>O preenchimento dos campos deve seguir as orientações detalhadas.</li>
+  </ul>
+
+  <h2>Arquivos principais</h2>
+  <ul>
+    <li><a href="Prompt.txt" target="_blank">Prompt.txt</a>: Instruções completas para preenchimento dos arquivos JSON.</li>
+  </ul>
+
+  <h2>Colaboração</h2>
+  <p>Sugestões de melhorias, novos exemplos ou dúvidas podem ser enviadas via Issues ou Pull Requests.</p>
+
+  <hr>
+  <p><strong>Objetivo:</strong><br> Garantir que o Copilot e outros agentes de IA tenham uma fonte de referência padronizada para atuação em tarefas de automação jurídica.</p>
 </body>
 </html>
